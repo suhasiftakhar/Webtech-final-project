@@ -24,7 +24,7 @@ session_start();
 			<li class="nav-item"><a href="#" class="nav-link "> NEWS FEED </a></li>
 			<li class="nav-item"><a href="Search.php" class="nav-link "> SEARCH </a></li>
 			<li class="nav-item"><a href="post.php" class="nav-link "> POST </a></li>
-			<li class="nav-item"><a href="#" class="nav-link "> NOTIFICATION </a></li>
+			<li class="nav-item"><a href="notification.php" class="nav-link "> NOTIFICATION </a></li>
 			<li class="nav-item"><a href="profile.php" class="nav-link "> PROFILE </a></li>
 			<li class="nav-item"><a href="logout.php" class="nav-link "> LOGOUT </a></li>
 
