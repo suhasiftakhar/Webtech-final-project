@@ -44,11 +44,14 @@ session_start();
 		$query = mysqli_query($conn,$q);
 
 		while($res = mysqli_fetch_array($query)){
-			if($_SESSION['status'] == $res['status']){
+			if($_SESSION['status'] == $res['status'] && $_SESSION['status']!=3 ){
+				continue;
+			}
+			elseif($_SESSION['status']==2 && $res['status']==0){
 				continue;
 			}
 			else{
-				//$_SESSION['nwf_id'] = $res['id'];
+			
 	?>
 
 	<section class="Search_holder d-flex justify-content-center align-items-center">
@@ -72,7 +75,26 @@ session_start();
 			<?php
 				}
 			?>
-			
+			<?php
+				if($res['status']==3){
+			?>
+			<tr>
+				<th align="left"> <h1>Admin Dashboard</h1> </th>
+			</tr>
+
+			<?php
+				}
+			?>
+			<?php
+				if($res['status']==3){
+			?>
+			<tr>
+				<th align="left"> <h3><?php echo $res['userType'] ?></h3> </th>
+			</tr>
+
+			<?php
+				}
+			?>
 			
 			<tr>
 				<th align="left"> Name </th>
