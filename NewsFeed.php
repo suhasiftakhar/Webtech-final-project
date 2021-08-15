@@ -48,6 +48,7 @@ session_start();
 				continue;
 			}
 			else{
+				//$_SESSION['nwf_id'] = $res['id'];
 	?>
 
 	<section class="Search_holder d-flex justify-content-center align-items-center">
@@ -131,7 +132,7 @@ session_start();
 			<br>
 
 
-			<th align="left"><button> <a href="#"> Apply Now </a> </button></th>
+			<th align="left"><button> <a href="apply.php?id=<?php echo $res['id']; ?>"> Apply Now </a> </button></th>
 
 		</form>
 
