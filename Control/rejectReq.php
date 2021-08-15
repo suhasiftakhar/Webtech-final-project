@@ -5,5 +5,5 @@
     $q = "UPDATE `notification` SET `approve`= 2 WHERE `nid` =  $id";
     $query = mysqli_query($conn,$q);
     $_SESSION['req'] = "reject";
-    header('Location: notification.php');
+    header('Location: ../notification.php');
 ?>

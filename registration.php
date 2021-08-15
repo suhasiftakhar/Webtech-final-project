@@ -1,6 +1,6 @@
 <?php
 
-include ('./database_connection.php');
+include ('control/database_connection.php');
 
 if (isset($_POST['done'])) {
   $userNamne = $_POST['username'];

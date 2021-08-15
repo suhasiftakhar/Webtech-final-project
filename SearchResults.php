@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
 			<li class="nav-item"><a href="Search.php" class="nav-link "> SEARCH </a></li>
 			<li class="nav-item"><a href="post.php" class="nav-link "> POST </a></li>
 			<li class="nav-item"><a href="#" class="nav-link "> NOTIFICATION </a></li>
-			<li class="nav-item"><a href="#" class="nav-link "> PROFILE </a></li>
+			<li class="nav-item"><a href="profile.php" class="nav-link "> PROFILE </a></li>
 			<li class="nav-item"><a href="logout.php" class="nav-link "> LOGOUT </a></li>
 
 
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
 <!-- </body> -->
 
 <?php
-include 'database_connection.php';
+include 'control/database_connection.php';
 $q = "SELECT * FROM `posts` WHERE `subject` LIKE '%$subject%' and `medium` like '%$medium%' and `class` like '%$class%' and `location` like '%$location%' and `institution` like '%$institution%' and `lowSal` >= $salRangeLow and `highSal` <= $salRangeHigh";
 $query = mysqli_query($conn, $q);
 
@@ -115,7 +115,7 @@ while ($res = mysqli_fetch_array($query)) {
 			<table>
 
 				<tr>
-					<th align="left"><button> <a style="color:Black" href="delete.php?id=<?php echo $res['id']; ?>"> Apply Now </a> </button></th>
+					<th align="left"><button> <a style="color:Black" href="control/apply.php?id=<?php echo $res['id']; ?>"> Apply Now </a> </button></th>
 				</tr>
 
 			</table>

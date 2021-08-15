@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
     }
     
 
-    header('Location: post.php');
+    header('Location: ../post.php');
 }
 
 // $stmt =$conn->prepare("insert into registration(userName,password,email,phoneNumber,gender,userTypee) valuse(?,?,?,?,?,?)");

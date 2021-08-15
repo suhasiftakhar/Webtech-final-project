@@ -21,11 +21,11 @@ if(isset($_POST['submit']))
         $_SESSION['email'] = $userNamne;
     }
 
-    header("location: NewsFeed.php");
+    header("location: ../NewsFeed.php");
   }
   else{
       echo "Invalid email or password";
-      header("location: login.php");
+      header("location: ../login.php");
   }
 
 }

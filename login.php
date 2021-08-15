@@ -26,7 +26,7 @@
 
 
   <section class="form_holder d-flex justify-content-center align-items-center">
-    <form class="login_form p-5" action="loginCheck.php" onsubmit="return validation()" method="POST">
+    <form class="login_form p-5" action="control/loginCheck.php" onsubmit="return validation()" method="POST">
       <h2>Please Log In</h2>
       <div class="form-group">
         <label for="username">Username</label>

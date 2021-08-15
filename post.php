@@ -46,7 +46,7 @@ session_start();
 
 
 	<section class="Post_holder1 d-flex justify-content-center align-items-center">
-		<form class="Post_form p-4" action="postCheck.php" method="POST">
+		<form class="Post_form p-4" action="control/postCheck.php" method="POST">
 
 
 			<form action="post.php" method="POST" class="post-form">

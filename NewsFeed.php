@@ -39,7 +39,7 @@ session_start();
 
 
 	<?php
-	include 'database_connection.php';
+	include 'control/database_connection.php';
 		$q = "SELECT * FROM `posts` ORDER BY `id` DESC";
 		$query = mysqli_query($conn,$q);
 
@@ -72,6 +72,7 @@ session_start();
 			<?php
 				}
 			?>
+			
 			
 			<tr>
 				<th align="left"> Name </th>
@@ -132,7 +133,7 @@ session_start();
 			<br>
 
 
-			<th align="left"><button> <a href="apply.php?id=<?php echo $res['id']; ?>"> Apply Now </a> </button></th>
+			<th align="left"><button> <a href="control/apply.php?id=<?php echo $res['id']; ?>"> Apply Now </a> </button></th>
 
 		</form>
 
