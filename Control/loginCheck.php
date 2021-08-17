@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('./database_connection.php');
+include_once ('./database_connection.php');
 
 if(isset($_POST['submit']))
 {
@@ -29,6 +29,16 @@ if(isset($_POST['submit']))
   }
 
 }
+if(empty($_POST["checkbox"]))
+    {
+    setcookie("username","");
+    setcookie("password","");
+    }
+    else
+    {
+        setcookie ("username",$_POST["username"],time()+ 100);
+        setcookie ("password",$_POST["password"],time()+ 100);
+    } 
 
 
 ?>

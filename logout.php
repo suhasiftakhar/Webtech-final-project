@@ -1,8 +1,18 @@
+
 <?php
+
 session_start();
 
-if(session_destroy()){
-    session_destroy();
-header("Location: index.php"); 
-}
+
+unset($_SESSION['username']);
+unset($_SESSION['password']);
+unset($_SESSION['email']);
+unset($_SESSION['result']);
+//unset($_SESSION['status']);
+session_destroy();   
+header("Location: login.php"); 
+
+
+
+
 ?>

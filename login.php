@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="SStyle.css">
+  
 
 </head>
 
@@ -23,6 +24,7 @@
       <li class="nav-item"><a href="registration.php" class="nav-link "> Registration </a></li>
     </ul>
   </nav>
+  
 
 
   <section class="form_holder d-flex justify-content-center align-items-center">
@@ -30,18 +32,19 @@
       <h2>Please Log In</h2>
       <div class="form-group">
         <label for="username">Email</label>
-        <input type="text" class="form-control" id="txtMail" type="text" name="username" placeholder="Username">
+        <input type="text" class="form-control" id="txtMail" type="text" name="username" value="<?php if (isset($_COOKIE["username"]) ) echo $_COOKIE["username"]; ?>" placeholder="Username">
         <span id="userMail"></span>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="Ipassword" type="password" name="password" placeholder="Password">
+        <input type="password" class="form-control" id="Ipassword" type="password" name="password" value="<?php if (isset($_COOKIE["password"]) ) echo $_COOKIE["password"];?>"  placeholder="Password">
         <span id="userPass"></span>
       </div>
-       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label></br>
-      </div> 
+        <!-- <div class="form-check">
+         <input type="checkbox" class="form-check-input" name="checkbox" id="exampleCheck1 "> 
+        <label class="form-check-label" name="checkbox" for="exampleCheck1">Check me out</label></br> 
+        
+      </div>   -->
       <button type="submit" class="btn btn-success mt-1" name="submit">Submit</button>
       <div>
         <ul id="forgotPassword">
@@ -52,9 +55,7 @@
       </div>
     </form>
   </section>
-
-
-
+  
 
 
   <script type="text/javascript" src="login.js"> </script>
