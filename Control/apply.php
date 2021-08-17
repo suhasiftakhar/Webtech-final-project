@@ -1,5 +1,5 @@
 <?php
-    include 'database_connection.php';
+    include './database_connection.php';
     session_start();
     $id = $_GET['id'];
     $reqId = $_SESSION['id'];

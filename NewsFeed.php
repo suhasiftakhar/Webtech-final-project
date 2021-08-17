@@ -75,6 +75,19 @@ session_start();
 			<?php
 				}
 			?>
+
+<?php
+				if($res['status']==2){
+			?>
+			<tr>
+				<th align="left"> <h3>Parent</h3> </th>
+			</tr>
+
+			<?php
+				}
+			?>
+
+
 			<?php
 				if($res['status']==3){
 			?>

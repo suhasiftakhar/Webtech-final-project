@@ -22,7 +22,7 @@ session_start();
 			<li class="nav-item"><a href="Search.php" class="nav-link "> SEARCH </a></li>
 			<li class="nav-item"><a href="post.php" class="nav-link "> POST </a></li>
 			<li class="nav-item"><a href="notification.php" class="nav-link "> NOTIFICATION </a></li>
-			<li class="nav-item"><a href="profile.php" class="nav-link "> PROFILE </a></li>
+			<!-- <li class="nav-item"><a href="profile.php" class="nav-link "> PROFILE </a></li> -->
 			<li class="nav-item"><a href="logout.php" class="nav-link "> LOGOUT </a></li>
 
 
@@ -32,47 +32,11 @@ session_start();
 
 
 	</nav>    
-        <?php
-            if($_SESSION['status']==0){
-        ?>
-            <ul>
-            <li><a  href="Dashboard.php"><img align="center" src="image/home.png"></a></li>
-            <li><a href="Dashboard.php">Dashboard</a></li>
-             <li><a href="RegistrationReview.php">Registration Review</a></li>
-            <li><a href="UpdateSystemInfo.php">Update Information</a></li>
-            
-        </ul>
-
-        <ul class="r">
-            <li><a href="AdminNotification.php">Notification</a></li>
-           <li><a class="active" href="profile.php">Admin</a></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
-            
-         <?php 
-            } 
-            else{
-        ?>
-        <!-- <ul>
-            <li><a  href="newsfeed.php"><img align="center" src="image/home.png"></a></li>
-            <li><a href="newsfeed.php">News Feed</a></li>
-            <li><a href="search.php">Search</a></li>
-            <li><a href="post.php">Post</a></li>
-            
-        </ul>
-
-        <ul class="r">
-            <li><a href="notification.php">Notification</a></li>
-            <li><a class="active" href="profile.php">Profile</a></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
-        <?php
-            }
-        ?>
-    </nav> -->
+       
+    
     
     <?php
-    include 'database_connection.php';
+    include( 'control/database_connection.php');
         $id = $_GET['id'];
 		$q = "SELECT * FROM `registration` WHERE `id` = $id";
 		$query = mysqli_query($conn,$q);

@@ -29,7 +29,7 @@
     <form class="login_form p-5" action="control/loginCheck.php" onsubmit="return validation()" method="POST">
       <h2>Please Log In</h2>
       <div class="form-group">
-        <label for="username">Username</label>
+        <label for="username">Email</label>
         <input type="text" class="form-control" id="txtMail" type="text" name="username" placeholder="Username">
         <span id="userMail"></span>
       </div>
@@ -38,10 +38,10 @@
         <input type="password" class="form-control" id="Ipassword" type="password" name="password" placeholder="Password">
         <span id="userPass"></span>
       </div>
-      <!-- <div class="form-check">
+       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label></br>
-      </div> -->
+      </div> 
       <button type="submit" class="btn btn-success mt-1" name="submit">Submit</button>
       <div>
         <ul id="forgotPassword">
